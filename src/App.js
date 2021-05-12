@@ -20,9 +20,8 @@ function App() {
         <Route  exact path="/" component={Main}/>
         <Route path="/goods/:category" component={GoodsList}/>
         <Route path="/product/:id" component={Product}/>
-        <Route path="/add" component={AddProduct}/>
         <Route path="/cart" component={Cart}/>
-        
+        <Route path="/add" component={AddProduct}/>
         <Route path="/edit" component={AddProduct}/>
         <Route component={NotFound}/>
         
