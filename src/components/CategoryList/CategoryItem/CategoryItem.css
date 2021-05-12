@@ -1,0 +1,9 @@
+.category_item{
+    width: 95%;
+    margin: 10px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+}

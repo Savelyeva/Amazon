@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Main from './pages/Main/Main';
+import {BrowserRouter as Router,Switch,Route} from"react-router-dom";
+import Header from './components/Header/Header';
+import NotFound from './pages/NotFound/NotFound';
+import GoodsList from './pages/GoodsList/GoodsList';
+import Product from './pages/Product/Product';
+import Cart from './pages/Cart/Cart';
+import AddProduct from './pages/AddProduct/AddProduct';
+import Preloader from './components/Preloader/Preloader';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Preloader/>
+      <Header/>
+      <Switch>
+        <Route  exact path="/" component={Main}/>
+        <Route path="/goods/:category" component={GoodsList}/>
+        <Route path="/product/:id" component={Product}/>
+        <Route path="/cart" component={Cart}/>
+        <Route path="/add" component={AddProduct}/>
+        <Route path="/edit" component={AddProduct}/>
+        <Route component={NotFound}/>
+        
+      </Switch>
+    </Router>
   );
 }
-
 export default App;

@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -20px;
+    background-color: #13192177;
+    padding:0 20px;
+}
+.input{
+ width: 100%;
+ height: 30px;
+ padding: 5px 30px 5px 10px;
+ 
+}
+.input:focus{
+    outline: none;
+}
+
+.amazon{
+width: 100px;
+
+}
+.cart{
+width: 30px;
+height: 30px;
+}
+.input_wrap{
+    position: relative;
+    width: 50%;
+}
+.search{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cart_wrap{
+    position: relative;
+    
+}
+.counter{
+    position: absolute;
+    bottom :0;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 2px 3px      ;
+    border-radius:50%;
+}
